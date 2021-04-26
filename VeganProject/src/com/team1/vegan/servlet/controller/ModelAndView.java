@@ -38,6 +38,13 @@ public class ModelAndView {
 	public void setRedirect(boolean isRedirect) {
 		this.isRedirect = isRedirect;
 	}
+
+	@Override
+	public String toString() {
+		return "ModelAndView [path=" + path + ", isRedirect=" + isRedirect + "]";
+	}
+	
+	
 }
 
 

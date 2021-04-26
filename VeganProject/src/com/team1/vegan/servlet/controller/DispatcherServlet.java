@@ -44,7 +44,9 @@ public class DispatcherServlet extends HttpServlet {
 		
 		try {
 			mv = controller.execute(request, response);
-			path = mv.getPath();
+			if(mv!=null) {
+				path = mv.getPath();
+			}
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
