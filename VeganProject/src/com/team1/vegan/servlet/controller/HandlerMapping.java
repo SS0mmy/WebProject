@@ -18,6 +18,7 @@ public class HandlerMapping {
 	//Component를 생성...command하는 기능...factory 본연의 역할
 	public Controller createController(String command) { // controller에서는 인터페이스 부모 타입으로 리턴
 		Controller controller = null;
+
 		if(command.equals("Member/register.do")) {
 			controller = new RegisterController();
 		}if(command.equals("Member/login.do")) {
@@ -29,6 +30,7 @@ public class HandlerMapping {
 		}if(command.equals("Member/logout.do")) {
 			controller = new LogoutController();
 		}if(command.equals("Member/idCheck.do")) {
+
 			controller = new IdCheckController();
 		}
 		return controller;

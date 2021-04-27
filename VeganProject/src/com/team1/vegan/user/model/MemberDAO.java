@@ -13,7 +13,7 @@ public interface MemberDAO {
 	void closeAll(PreparedStatement ps, Connection conn)throws SQLException ;
 	void closeAll(ResultSet rs, PreparedStatement ps, Connection conn)throws SQLException ;
 	
-	
+
 	void registerMember(MemberVO vo) throws SQLException;
 	MemberVO getMember(String memberId) throws SQLException;
 	void updateMember(MemberVO vo) throws SQLException;
@@ -22,11 +22,8 @@ public interface MemberDAO {
 	void registerAreas(String memberId,String[] areas) throws SQLException;
 	void updateAreas(String memberId, String[] areas) throws SQLException;
 	
-	
-	
+
 	MemberVO login(String memberId, String password) throws SQLException;	
-	
-	
 	
 	boolean isExist(String memberId) throws SQLException;
 }

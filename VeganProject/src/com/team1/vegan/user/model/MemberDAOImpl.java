@@ -55,7 +55,7 @@ public class MemberDAOImpl implements MemberDAO {
 			String query = "INSERT INTO member VALUES(?,?,?,?)";
 			ps = conn.prepareStatement(query);
 	
-			
+
 			System.out.println("PreparedStatement 생성됨...registerMember");
 			
 			ps.setString(1, vo.getMemberId());
@@ -63,12 +63,12 @@ public class MemberDAOImpl implements MemberDAO {
 			ps.setString(3, vo.getName());
 			ps.setString(4, vo.getAddress());
 			
-			
 			System.out.println(ps.executeUpdate()+" row INSERT OK!!");
 		}finally{
 			closeAll(ps, conn);
 		}
 	}
+
 
 	@Override
 	public MemberVO getMember(String memberId) throws SQLException {
@@ -255,8 +255,6 @@ public class MemberDAOImpl implements MemberDAO {
 		
 		
 	}
+}
 
-
-
-	}
 
